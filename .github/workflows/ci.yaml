@@ -429,7 +429,8 @@ jobs:
       run: |
         set -eux
         python -V
-        python -m pip install Cython wheel
+        #python -m pip install Cython wheel
+        python -m pip install "Cython<3.0" wheel
 
         python setup.py \
         --with-libyaml build_ext \
